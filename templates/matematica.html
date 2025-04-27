@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>Calcular</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Matemática - Calcular</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Voltar para o Perfil</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <form method="POST">
+        <input type="number" name="num1" required >
+        <input type="number" name="num2" required >
+
+        <!-- Botões para Soma e Subtração -->
+        <button type="submit" name="operacao" value="soma">Soma</button>
+        <button type="submit" name="operacao" value="subtracao">Subtração</button>
+        <button type="submit" name="operacao" value="multiplicacao">Mutiplicação</button>
+        <button type="submit" name="operacao" value="divisao"">Divisão</button>
+    </form>
+
+    {% if resultado is not none %}
+        <h3>Operação: {{ operacao.capitalize() }}</h3>  <!-- Exibe a operação em formato legível -->
+        <h3>Resultado: {{ resultado }}</h3>
+    {% endif %}
+</section>
+
+<footer>
+    <p>&copy; 2025 SENAI Videira</p>
+</footer>
+
+</body>
+</html>
+

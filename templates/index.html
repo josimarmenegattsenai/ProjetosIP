@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Página com Python, HTML e CSS</title>
+    <title>Perfil do Aluno - SENAI Videira</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Olá, mundo!</h1>
-    <p>Esta página está usando Flask com HTML e CSS.</p>
+
+<header>
+    <h1>Aluno Aluno</h1>
+    <p>Aluno de Iniciação Profissional - SENAI Videira</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#formacao">Formação</a></li>
+         <!-- Menu Projetos com submenu -->
+        <li>
+            <a href="#">Projetos</a>
+        <ul>
+                <li><a href="/matematica">Calcular (Soma e Subtração)</a></li>
+                <li><a href="/temperatura">Temperatura</a></li>
+        </ul>
+            </li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+</nav>
+
+<section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Sou um estudante dedicado, apaixonado por tecnologia e sempre buscando novos desafios. Atualmente curso Iniciação Profissional com foco em informática.</p>
+</section>
+
+<section id="formacao">
+    <h2>Formação</h2>
+    <p>Curso: Programação - SENAI Rio das Antas - SC</P>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Email: joao.silva@sesisenai.org.br</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 João Silva - SENAI Videira</p>
+</footer>
+
 </body>
 </html>
